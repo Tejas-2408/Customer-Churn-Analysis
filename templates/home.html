@@ -1,0 +1,153 @@
+<html>
+<head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+   <body>
+      <title>Churn Prediction</title>
+	  <div class="container">
+		<div class="row">
+			<form action="{{ url_for('predict')}}" method="POST">
+				<!-- Senior Citizen -->
+				<label for="seniorCitizen">Senior Citizen:</label>
+				<select id="query1" name="query1">
+					<option value="0">0 - Not a senior citizen</option>
+					<option value="1">1 - Senior citizen</option>
+				</select><br><br>
+		
+				<!-- Monthly Charges -->
+				<label for="monthlyCharges">Monthly Charges:</label>
+				<input type="number" id="query2" name="query2" step="0.01"><br><br>
+		
+				<!-- Total Charges -->
+				<label for="totalCharges">Total Charges:</label>
+				<input type="number" id="query3" name="query3" step="0.01"><br><br>
+		
+				<!-- Gender -->
+				<label for="gender">Gender:</label>
+				<select id="query4" name="query4">
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+				</select><br><br>
+		
+				<!-- Partner -->
+				<label for="partner">Partner:</label>
+				<select id="query5" name="query5">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</select><br><br>
+		
+				<!-- Dependents -->
+				<label for="dependents">Dependents:</label>
+				<select id="query6" name="query6">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</select><br><br>
+		
+				<!-- Phone Service -->
+				<label for="phoneService">Phone Service:</label>
+				<select id="query7" name="query7">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</select><br><br>
+		
+				<!-- Multiple Phone Lines -->
+				<label for="multiplePhoneLines">Multiple Phone Lines:</label>
+				<select id="query8" name="query8">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</select><br><br>
+		
+				<!-- Internet Service -->
+				<label for="internetService">Internet Service:</label>
+				<select id="query9" name="query9">
+					<option value="dsl">DSL</option>
+					<option value="fiberOptic">Fiber Optic</option>
+					<option value="no">No</option>
+				</select><br><br>
+		
+				<!-- Online Security -->
+				<label for="onlineSecurity">Online Security:</label>
+				<select id="query10" name="query10">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+					<option value="noInternet">No Internet Service</option>
+				</select><br><br>
+		
+				<!-- Online Backup -->
+				<label for="onlineBackup">Online Backup:</label>
+				<select id="query11" name="query11">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+					<option value="noInternet">No Internet Service</option>
+				</select><br><br>
+		
+				<!-- Device Protection -->
+				<label for="deviceProtection">Device Protection:</label>
+				<select id="query12" name="query12">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</select><br><br>
+		
+				<!-- Tech Support -->
+				<label for="techSupport">Tech Support:</label>
+				<select id="query13" name="query13">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</select><br><br>
+		
+				<!-- Streaming TV -->
+				<label for="streamingTV">Streaming TV:</label>
+				<select id="query14" name="query14">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</select><br><br>
+		
+				<!-- Streaming Movies -->
+				<label for="streamingMovies">Streaming Movies:</label>
+				<select id="query15" name="query15">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</select><br><br>
+		
+				<!-- Contract -->
+				<label for="contract">Contract:</label>
+				<select id="query16" name="query16">
+					<option value="monthToMonth">Month-to-month</option>
+					<option value="oneYear">One year</option>
+					<option value="twoYear">Two year</option>
+				</select><br><br>
+		
+				<!-- Paperless Billing -->
+				<label for="paperlessBilling">Paperless Billing:</label>
+				<select id="query17" name="query17">
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</select><br><br>
+		
+				<!-- Payment Method -->
+				<label for="paymentMethod">Payment Method:</label>
+				<select id="query18" name="query18">
+					<option value="bankTransfer">Bank Transfer (automatic)</option>
+					<option value="creditCard">Credit Card (automatic)</option>
+					<option value="electronicCheck">Electronic Check</option>
+					<option value="mailedCheck">Mailed Check</option>
+				</select><br><br>
+		
+				<!-- Tenure -->
+				<label for="tenure">Tenure:</label>
+				<input type="number" id="query19" name="query19"><br><br>
+		
+				<input type="submit" value="Submit">
+			</form>
+		 </div>
+		  
+	</div>
+
+    
+   </body>
+</html>
+
+
